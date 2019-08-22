@@ -30,3 +30,5 @@ For precision work, sensors have four wires- two to carry the sense current,
 It is also possible to obtain three-wire sensors,   
   although these operate on the (not necessarily valid) assumption that the resistance of each of the three wires is the same.  
 
+
+Work in Chrome and Mozilla Firefox.
