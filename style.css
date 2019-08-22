@@ -1,0 +1,965 @@
+html {
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+  margin-left: 30px;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+  Your use of the content in the files referenced here are subject to the terms of the license at http://aka.ms/fabric-font-license
+*/
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*
+  text-shadow:1px 1px 1px rgba(0,0,0,0.004) !important;
+  */
+}
+
+body {
+  /*
+    background-color: #eeeeee;
+*/
+  color: #333333;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+  font-size: 15px!important;
+  line-height: 1.5em;
+}
+
+h1 {
+  font-size: 38px;
+  font-weight: 100;
+  margin-bottom: 34px;
+  margin-top: 48px;
+}
+
+h2, h3, h4, h5 {
+  color: #000000;
+  font-weight: 300;
+  margin-bottom: 16px!important;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 100;
+  margin-bottom: 4px;
+  margin-top: 48px;
+}
+
+h3 {
+  font-size: 21px;
+  margin: 40px 0 8px 0;
+}
+
+h4 {
+  color: #212121;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+p, ul, ol {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+ol {
+  list-style-position: inside;
+  list-style-type: decimal;
+}
+
+a {
+  color: #0078d7;
+  text-decoration: none;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 600;
+}
+
+code {
+  font-family: monospace;
+}
+
+/* Tables
+  =============== */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+thead th {
+  border-bottom: 2px solid #dedede;
+}
+
+tfoot th {
+  border-top: 2px solid #dedede;
+}
+
+td {
+  border-bottom: 1px solid #dedede;
+}
+
+th, td {
+  text-align: left;
+  padding: .5rem;
+}
+
+caption {
+  padding: 1rem 0;
+  caption-side: bottom;
+  color: #ababab;
+}
+
+.striped-table tbody tr:nth-child(odd) {
+  background-color: #f8f8f8;
+}
+
+.contain-table {
+  overflow-x: auto;
+}
+
+@media (min-width: 600px) {
+  .contain-table {
+    width: 100%;
+  }
+}
+
+hr {
+  height: 0;
+  border: 0;
+  border-top: 1px solid #dedede;
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  margin-bottom: .5rem;
+}
+
+/*
+==========================================================  */
+
+/* Buttons
+  =============== */
+
+button.button, a.button, [type=submit], [type=reset], [type=button] {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #e7e7e7;
+  border: 1px solid #e7e7e7;
+  cursor: pointer;
+  display: inline-block;
+  height: 32px;
+  min-width: 80px;
+  padding: 4px 20px 5px;
+  white-space: nowrap;
+}
+
+a.button:hover, button.button:hover, [type=submit]:hover, [type=reset]:hover, [type=button]:hover {
+  border-color: #7a7a7a;
+}
+
+a.button:focus, button.button:focus, [type=submit]:focus, [type=reset]:focus, [type=button]:focus {
+  outline: 0;
+}
+
+a.button:active, button.button:active, [type=submit]:active, [type=reset]:active, [type=button]:active {
+  /*
+  background-color: #eeeeee;
+  */
+  border-color: #e7e7e7;
+}
+
+a.button.is-disabled, button.button:disabled, [type=submit]:disabled, [type=reset]:disabled, [type=button]:disabled {
+  background-color: #f4f4f4;
+  border-color: #f4f4f4;
+  cursor: not-allowed;
+}
+
+a.button.is-disabled:hover, button.button:disabled:hover, [type=submit]:disabled:hover, [type=reset]:disabled:hover, [type=button]:disabled:hover, a.button:disabled:focus, button:disabled:focus, [type=submit]:disabled:focus, [type=reset]:disabled:focus, [type=button]:disabled:focus {
+  outline: 0;
+}
+
+/*
+===================================================
+ inputs 
+======================================================    */
+
+[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  border: 1px solid #c8c8c8;
+  border-radius: 0;
+  font-weight: 300;
+  font-size: 14px;
+  color: #333333;
+  height: 32px;
+  padding: 6px 12px 7px;
+  width: 100%;
+  min-width: 180px;
+  outline: 0;
+  text-overflow: ellipsis;
+  margin-bottom: 8px;
+}
+
+[type=color]:focus, [type=color]:active, [type=date]:focus, [type=date]:active, [type=datetime]:focus, [type=datetime]:active, [type=datetime-local]:focus, [type=datetime-local]:active, [type=email]:focus, [type=email]:active, [type=month]:focus, [type=month]:active, [type=number]:focus, [type=number]:active, [type=password]:focus, [type=password]:active, [type=search]:focus, [type=search]:active, [type=tel]:focus, [type=tel]:active, [type=text]:focus, [type=text]:active, [type=url]:focus, [type=url]:active, [type=week]:focus, [type=week]:active, [type=time]:focus, [type=time]:active, select:focus, select:active, textarea:focus, textarea:active {
+  border-color: #0078d7;
+  background: #ffffff;
+}
+
+/* Change Autocomplete styles in Chrome*/
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
+  border: 1px solid #0078d7;
+  -webkit-text-fill-color: #333333;
+  box-shadow: 0 0 0px 1000px #ffffff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+textarea {
+  overflow: auto;
+  height: auto;
+  line-height: 1.6
+}
+
+fieldset {
+  border: 1px solid #eee;
+  border-radius: 2px;
+  padding: 60px;
+  margin: 1.618rem 0
+}
+
+legend {
+  padding: 0 .5rem;
+  font-weight: 600;
+  letter-spacing: .7px
+}
+
+select::-ms-expand {
+  display: none
+}
+
+[type=range] {
+  width: 100%
+}
+
+label {
+  font-weight: 400;
+  font-size: 1rem;
+  max-width: 100%;
+  display: block;
+  margin: .1rem 0 .1rem
+}
+
+:-moz-placeholder {
+  font-weight: 100;
+  font-size: 14px;
+  color: #d8d8d8
+}
+
+:-ms-input-placeholder {
+  font-weight: 100;
+  font-size: 14px;
+  color: #d8d8d8
+}
+
+::-moz-placeholder {
+  font-weight: 100;
+  font-size: 14px;
+  color: #d8d8d8
+}
+
+::-webkit-input-placeholder {
+  font-weight: 100;
+  font-size: 14px;
+  color: #d8d8d8
+}
+
+::placeholder {
+  font-weight: 100;
+  font-size: 14px;
+  color: #d8d8d8
+}
+
+/*
+=======  check box ======================   */
+
+/*
+.checkbox,
+.checkbox *,
+.checkbox *::after,
+.checkbox *::before,
+.radio,
+.radio *,
+.radio *::after,
+.radio *::before {
+  box-sizing: border-box;
+}
+*/
+
+.checkbox, .radio, .toggle {
+  margin: 8px 0px 8px 0px
+}
+
+.toggle {
+  padding-left: 24px!important;
+}
+
+.checkbox input[type="checkbox"] {
+  opacity: 0;
+}
+
+.checkbox label {
+  position: relative;
+  display: inline-block;
+  /*16px width of fake checkbox + 12px distance between fake checkbox and text*/
+  padding-left: 28px;
+}
+
+.checkbox label::before, .checkbox label::after {
+  position: absolute;
+  content: "";
+  /*Needed for the line-height to take effect*/
+  display: inline-block;
+}
+
+/*Outer box of the fake checkbox*/
+
+.checkbox label::before, .radio label::before {
+  height: 18px;
+  width: 18px;
+  border: 2px solid #7a7a7a;
+  left: 0px;
+  background-color: transparent;
+  /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
+     *to vertically center it.
+     */
+  top: 0px;
+  transition-property: background, border, border-color;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.23, 1);
+}
+
+.radio label::before {
+  border-radius: 50%;
+}
+
+/*Checkmark of the fake checkbox*/
+
+.checkbox label::after {
+  height: 6px;
+  width: 11px;
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transform: rotate(-50deg);
+  left: 4px;
+  top: 5px;
+}
+
+/*Hide the checkmark by default*/
+
+.checkbox input[type="checkbox"]+label::after {
+  content: "";
+}
+
+.checkbox input[type="checkbox"]+label:hover::before, .radio input[type="radio"]+label:hover::before {
+  content: "";
+  border-color: #7a7a7a;
+}
+
+.checkbox input[type="checkbox"]:hover+label:hover, .radio input[type="radio"]:hover+label:hover {
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"]:checked+label::before {
+  content: "";
+  background: #0078d7;
+  border-color: #0078d7
+}
+
+/*Unhide on the checked state*/
+
+.checkbox input[type="checkbox"]:checked+label::after {
+  content: "";
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+/*Adding focus styles on the outer-box of the fake checkbox*/
+
+.checkbox input[type="checkbox"]:focus+label::before {
+  outline: none;
+}
+
+/*
+=====  radio button ====================================     */
+
+.radio input[type="radio"] {
+  opacity: 0;
+}
+
+.radio label {
+  position: relative;
+  display: inline-block;
+  /*16px width of fake radio + 12px distance between fake radio and text*/
+  padding-left: 28px;
+}
+
+.radio label::before, .radio label::after {
+  position: absolute;
+  content: "";
+  /*Needed for the line-height to take effect*/
+  display: inline-block;
+}
+
+.radio input[type="radio"]:checked+label::before {
+  content: "";
+  background: #0078d7;
+  border-color: #0078d7;
+  box-shadow: inset 0 0 0px 0px #fff
+}
+
+/*Checkmark of the fake checkbox*/
+
+.radio label::after {
+  height: 6px;
+  width: 6px;
+  border: 2px solid transparent;
+  background-color: transparent;
+  border-radius: 50px;
+  top: 6px;
+  left: 6px;
+}
+
+/*Hide the checkmark by default*/
+
+.radio input[type="radio"]+label::after {
+  content: "";
+}
+
+/*Unhide on the checked state*/
+
+.radio input[type="radio"]:checked+label::after {
+  content: "";
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+}
+
+.checkbox input[type="checkbox"]:disabled+label::before, .radio input[type="radio"]:disabled+label::after {
+  background-color: #7a7a7a!important;
+  cursor: not-allowed;
+}
+
+.checkbox input[type="checkbox"]:disabled+label:hover, .radio input[type="radio"]:disabled+label:hover {
+  cursor: not-allowed;
+}
+
+.radio input[type="radio"]:disabled+label::after {
+  border: 2px solid #7a7a7a;
+  background-color: #7a7a7a;
+  box-shadow: inset 0 0 5px 5px #7a7a7a
+}
+
+.radio input[type="radio"]:disabled+label::before {
+  background: #7a7a7a
+}
+
+.checkbox input[type="checkbox"]:disabled+label::after {
+  border: transparent;
+}
+
+/*
+============  toggle button ======================== 
+        <div class="toggle">
+          <input type="checkbox" id="toggle" />  
+          <label for="toggle" class="switch"> Switch </label>
+        </div>
+*/
+
+/*
+.toggle,
+.toggle *,
+.toggle *::after,
+.toggle *::before{
+  box-sizing: border-box;
+}
+*/
+
+.toggle > .switch {
+  position: relative;
+  display: inline-block;
+  padding-left: 52px;
+}
+
+.toggle > .switch::before {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 18px;
+  border: 2px solid #777777;
+  background-color: #f4f4f4;
+  top: 2px;
+  left: -2px;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.toggle > .switch::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 1px 1px #777777;
+  background-color: #777777;
+  top: 5px;
+  left: 1px;
+  transition: all 0.25s;
+}
+
+.toggle > input[type=checkbox].itoggle:checked + .switch::after {
+  left: 19px;
+  box-shadow: inset 0 0 1px 1px #0078d7;
+  background-color: white;
+}
+
+.toggle > input[type=checkbox].itoggle:checked + .switch::before {
+  border: 2px solid #0078d7;
+  background-color: #0078d7;
+}
+
+.toggle > input[type=checkbox].itoggle {
+  display: none;
+}
+
+.toggle > .switch:hover {
+  cursor: pointer;
+}
+
+/*
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ =======       simple basic   grid        ==============================
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    */
+
+.container {
+  margin: 0 auto;
+  max-width: 980px;
+  min-width: 320px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  text-align: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 1;
+  margin: 10px;
+  /*
+  background-color: #efefef;
+  border: 1px solid #dedede;
+  */
+  padding: 10px;
+}
+
+.col-1 {
+  max-width: calc(100% / 12);
+}
+
+.col-2 {
+  max-width: calc(100% / 12 * 2);
+}
+
+.col-3 {
+  max-width: calc(100% / 12 * 3);
+}
+
+.col-4 {
+  max-width: calc(100% / 12 * 4);
+}
+
+.col-5 {
+  max-width: calc(100% / 12 * 5);
+}
+
+.col-6 {
+  max-width: calc(100% / 2);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    overflow: auto;
+  }
+  .col {
+    min-width: 100%;
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* Helpers
+  =============== */
+
+.box {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  padding: .5rem 0;
+}
+
+.m-serif {
+  font-family: serif;
+}
+
+.clearfix::before, .clearfix::after {
+  content: " ";
+  display: block;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.text-bold{
+  font-weight: bold
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+responsive image
+*/
+
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.no-padding-top {
+  padding-top: 0;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.padding-top {
+  padding-top: 2rem;
+}
+
+.padding-bottom {
+  padding-bottom: 2rem;
+}
+
+.no-margin-top {
+  margin-top: 0;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.margin-top {
+  margin-top: 1.5rem;
+}
+
+.margin-bottom {
+  margin-bottom: 1.5rem;
+}
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+/*
+==========  link ==================    */
+
+.m-link {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  font-weight: 400;
+  color: #0078d7;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.m-link:hover, .m-link:focus {
+  color: #004578;
+}
+
+.m-link:active {
+  color: #0078d7;
+}
+
+.m-full {
+  width: 100%
+}
+
+/*
+===============================================================
+==============     ANIMATIONS  ================================
+===============================================================   */
+
+.w3-spin {
+  animation: w3-spin 2s infinite linear
+}
+
+@keyframes w3-spin {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(359deg)
+  }
+}
+
+.m-anim-fading {
+  animation: fading 10s infinite
+}
+
+@keyframes fading {
+  0% {
+    opacity: 0
+  }
+  50% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0
+  }
+}
+
+.m-anim-opacity {
+  animation: opac 0.8s
+}
+
+@keyframes opac {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
+.m-anim-top {
+  position: relative;
+  animation: animatetop 0.4s
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+.m-anim-left {
+  position: relative;
+  animation: animateleft 0.4s
+}
+
+@keyframes animateleft {
+  from {
+    left: -300px;
+    opacity: 0
+  }
+  to {
+    left: 0;
+    opacity: 1
+  }
+}
+
+.m-anim-right {
+  position: relative;
+  animation: animateright 0.4s
+}
+
+@keyframes animateright {
+  from {
+    right: -300px;
+    opacity: 0
+  }
+  to {
+    right: 0;
+    opacity: 1
+  }
+}
+
+.m-anim-bottom {
+  position: relative;
+  animation: animatebottom 0.4s
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -300px;
+    opacity: 0
+  }
+  to {
+    bottom: 0;
+    opacity: 1
+  }
+}
+
+.m-anim-zoom {
+  animation: animatezoom 0.6s
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+.m-anim-input {
+  transition: width 0.4s ease-in-out
+}
+
+.m-anim-input:focus {
+  width: 100%!important
+}

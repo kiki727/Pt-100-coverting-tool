@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+    <title>TC PT100 Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .feather-edit-3:hover{
+            cursor: pointer;
+            color: #0078d8;
+        }
+        .unit {
+            padding: 4px;
+        }
+        #win {
+            position:absolute;
+            z-index: 19;
+            text-align: center;
+            background-color: white;
+            border: 1px solid #777777;
+            width: 250px;
+            box-shadow: 0 0 10px 1px #dddddd;
+
+        }
+        #winheader {
+            min-height: 38px;
+            padding: 10px;
+            cursor: move;
+            z-index: 20;
+            background-color: #2196F3;
+            color: #fff;
+        }
+
+        .center {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -80%);
+        }
+    </style>
+</head>
+<body>
+ 
+    <div id="window"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col app" >
+
+                <h3 class="text-bold">Pt-100 Convert tool</h3>
+
+                <div class="box" style="width:250px">
+
+                    <div class="radio text-left">
+                        <input type="radio" id="ohm" name="convert" value="totemp" checked>
+                        <label for="ohm">Convert to  <strong>&ohm;</strong></label>
+                      </div>
+                      <div class="radio text-left">
+                        <input type="radio" id="temp" name="convert" value="toohm">
+                        <label for="temp">Convert to <strong>&deg;C</strong></label>
+                      </div>
+
+                    <hr>
+
+
+                    <div class="text-left">
+                            <label for="output">Output value:</label>
+                            <h4 id="output">no input to convert</h4>
+                        </div>
+    
+                        <hr>
+
+
+                      <div class="text-left">
+                          <label for="data-convert">Input value: </label>
+                        <input type="text" id="data-convert" class="text-right" style="width:250px">
+                      </div>
+
+                    <hr>
+
+                </div>
+
+
+                    <div class="box" style="width:250px">
+                        
+                        <div class="text-left">
+                            <label for="a-coef">A coefficient</label>
+                            <input type="text" id="a-coef" class="text-right" style="width:224px">
+                            <div class="inline-block" style="vertical-align: -5px">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-3"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                            </div>
+                        </div>
+
+                        <div class="text-left">
+                            <label for="b-coef">B coefficient </label>
+                            <input type="text" id="b-coef" class="text-right" style="width:224px">
+                            <div class="inline-block" style="vertical-align: -5px">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-3"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                            </div>
+                        </div>
+
+                        <div class="text-left margin-bottom">
+                            <label for="c-coef">C coefficient </label>
+                            <input type="text" id="c-coef" class="text-right" style="width:224px">
+                            <div class="inline-block" style="vertical-align: -5px">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-3"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                            </div>
+                        </div>
+
+                        <hr>
+                    </div>
+                      
+
+                
+            </div>
+        </div>
+    </div>
+
+
+    
+    <script src="js/mithril.js"></script>
+    <script src="js/FileSaver.js"></script>
+    <script src="js/rtdPt100.js"></script>
+
+    <script src="js/components.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
