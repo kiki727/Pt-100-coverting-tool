@@ -32,3 +32,5 @@ It is also possible to obtain three-wire sensors,
 
 
 Works in Google Chrome and Mozilla Firefox.
+
+[Link to app] https://kiki727.github.io/Pt-100-coverting-tool/
